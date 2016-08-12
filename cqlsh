@@ -211,6 +211,9 @@ parser.add_option("--cqlshrc", help="Specify an alternative cqlshrc file locatio
 parser.add_option('--cqlversion', default=DEFAULT_CQLVER,
                   help='Specify a particular CQL version (default: %default).'
                        ' Examples: "3.0.3", "3.1.0"')
+parser.add_option('--protocolversion', default=DEFAULT_PROTOCOL_VERSION,
+                                         help='Specify a particular protocol version (default: %default).'
+                                              ' Examples: "3", "4"')
 parser.add_option("-e", "--execute", help='Execute the statement and quit.')
 parser.add_option("--connect-timeout", default=DEFAULT_CONNECT_TIMEOUT_SECONDS, dest='connect_timeout',
                   help='Specify the connection timeout in seconds (default: %default seconds).')
@@ -2797,6 +2800,7 @@ def main(options, hostname, port):
                       completekey=options.completekey,
                       browser=options.browser,
                       cqlver=options.cqlversion,
+                      protocol_version = options.protocolversion,
                       keyspace=options.keyspace,
                       display_timestamp_format=options.time_format,
                       display_nanotime_format=options.nanotime_format,
