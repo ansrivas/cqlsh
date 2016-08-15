@@ -1,5 +1,14 @@
 # cqlsh
 
+##### This fork exposes a new command line parameter `--protocolversion` from the original `cqlsh` in case there is a mismatch w.r.t default protocol version set in cqlsh vs the cassandra installation.
+
+##### Usage :
+```bash
+cqlsh localhost --cqlversion="3.2.1" --protocolversion="3"
+cqlsh localhost --cqlversion="3.2.1" --protocolversion="4"
+```
+
+
 ### Note: This is a mirror of cqlsh from the official [Cassandra repo](http://git-wip-us.apache.org/repos/asf/cassandra.git).
 
 If you would like to contribute to cqlsh, [find out more information here](http://wiki.apache.org/cassandra/HowToContribute).
