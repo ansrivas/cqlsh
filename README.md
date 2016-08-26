@@ -2,9 +2,17 @@
 
 ##### This fork exposes a new command line parameter `--protocolversion` from the original `cqlsh` in case there is a mismatch w.r.t default protocol version set in cqlsh vs the cassandra installation.
 
+##### If incase you encounter errors like this:
+  ```
+  Connection error: ('Unable to connect to any servers', {'127.0.0.1': DriverException('ProtocolError returned from server while using explicitly set client protocol_version 4',)})
+  ``` 
+  
+Following can be useful:
+
 ##### Usage :
 ```bash
 cqlsh localhost --cqlversion="3.2.1" --protocolversion="3"
+or
 cqlsh localhost --cqlversion="3.2.1" --protocolversion="4"
 ```
 
