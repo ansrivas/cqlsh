@@ -16,7 +16,11 @@ or
 cqlsh localhost --cqlversion="3.2.1" --protocolversion="4"
 ```
 
-
+##### Installation:
+  ```
+  sudo pip install git+https://github.com/ansrivas/cqlsh
+  ```
+  
 ### Note: This is a mirror of cqlsh from the official [Cassandra repo](http://git-wip-us.apache.org/repos/asf/cassandra.git).
 
 If you would like to contribute to cqlsh, [find out more information here](http://wiki.apache.org/cassandra/HowToContribute).
