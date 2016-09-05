@@ -5,6 +5,7 @@
 ##### If incase you encounter errors like this:
   ```
   Connection error: ('Unable to connect to any servers', {'127.0.0.1': DriverException('ProtocolError returned from server while using explicitly set client protocol_version 4',)})
+
   ``` 
   
 Following can be useful:
@@ -15,6 +16,17 @@ cqlsh localhost --cqlversion="3.2.1" --protocolversion="3"
 or
 cqlsh localhost --cqlversion="3.2.1" --protocolversion="4"
 ```
+
+##### If getting an error like this : 
+  ```
+  Connection error: ('Unable to connect to any servers', {'localhost': TypeError('ref() does not take keyword arguments',)})
+  ```
+  try to export this:
+  ```
+  export CQLSH_NO_BUNDLED=true
+  ```
+
+
 
 ##### Installation:
   ```
